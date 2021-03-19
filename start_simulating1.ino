@@ -19,7 +19,6 @@
   This example code is in the public domain.
 */
 
-int inches = 0;
 
 int cm = 0;
 
@@ -45,13 +44,8 @@ void setup()
 
 void loop()
 {
-  // measure the ping time in cm
   cm = 0.01723 * readUltrasonicDistance(7, 7);
-  // convert to inches by dividing by 2.54
-  inches = (cm / 2.54);
-  Serial.print(inches);
-  Serial.print("in, ");
   Serial.print(cm);
   Serial.println("cm");
-  delay(100); // Wait for 100 millisecond(s)
+  delay(250); // Wait for 250 millisecond(s)
 }
